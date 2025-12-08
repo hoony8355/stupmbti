@@ -95,7 +95,7 @@ export const RESULT_TYPES: TypeDefinition[] = [
       "실제 고객 5명 인터뷰 잡고 Notion에 정리하기",
       "주 1회 '진짜 문제만 이야기하는 회의' 30분 고정"
     ],
-    ctaCopy: "내부에서 답을 찾으려다 더 꼬이고 있지 않나요? 혼자 끙끙대지 말고 서바이버즈 ‘초기 셋업 코호트’에서 뚫어보세요.",
+    ctaCopy: "IPTE 타입은 ‘내부에서 답을 찾으려다 더 꼬이는’ 경향이 강합니다. 혼자 끙끙대지 말고 서바이버즈 ‘초기 셋업 코호트’에서 뚫어보세요.",
     secretMentor: {
       name: "Mentor K",
       role: "Ex-Series B COO",
@@ -117,7 +117,7 @@ export const RESULT_TYPES: TypeDefinition[] = [
       "대시보드 자동화를 통해 '주요 3개 지표'만 관리",
       "채널별 실험 설계를 분기마다 3~4개로 제한"
     ],
-    ctaCopy: "성장을 주도하는 게 아니라 끌려가고 계신가요? 서바이버즈 ‘스케일링 코호트’에서 시스템을 잡으세요.",
+    ctaCopy: "EMSS 타입은 ‘성장을 주도하는 게 아니라 끌려가는’ 느낌이 강합니다. 서바이버즈 ‘스케일링 코호트’에서 시스템을 잡으세요.",
     secretMentor: {
       name: "Mentor J",
       role: "Growth Lead",
@@ -139,7 +139,7 @@ export const RESULT_TYPES: TypeDefinition[] = [
       "고객 페르소나를 1명으로 좁혀서 타겟팅 재설정",
       "마케팅 대행사 의존 줄이고 직접 채널 운영해보기"
     ],
-    ctaCopy: "제품은 준비됐는데 시장이 안 열리나요? 언더독스 서바이버즈에서 초기 시장 진입 전략을 함께 수립하세요.",
+    ctaCopy: "IMTE 타입은 제품은 준비됐는데 시장이 안 열려 답답한 상황입니다. 언더독스 서바이버즈에서 초기 시장 진입 전략을 함께 수립하세요.",
     secretMentor: {
       name: "Mentor P",
       role: "Sales Expert",
@@ -161,7 +161,7 @@ export const RESULT_TYPES: TypeDefinition[] = [
       "고객 요구사항 우선순위 재정렬 (ICE Score 활용)",
       "개발-비즈니스 팀 간 용어 통일 및 싱크 회의"
     ],
-    ctaCopy: "시장은 기다려주지 않는데 기술이 발목을 잡나요? 테크 리더들과 함께 시스템 고도화 전략을 논의하세요.",
+    ctaCopy: "시장은 기다려주지 않는데 기술이 발목을 잡고 있습니다. 테크 리더들과 함께 시스템 고도화 전략을 논의하세요.",
     secretMentor: {
       name: "Mentor L",
       role: "CTO / Tech Lead",

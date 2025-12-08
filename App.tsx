@@ -119,7 +119,7 @@ const ResultCard: React.FC<{ type: TypeDefinition, isMain?: boolean }> = ({ type
     {/* Header */}
     <div className="bg-ud-dark p-8 md:p-10 text-white relative overflow-hidden">
       <div className="absolute top-[-20px] right-[-20px] opacity-10 pointer-events-none">
-        <span className="text-[10rem] font-black leading-none">{type.code}</span>
+        <span className="text-[12rem] md:text-[14rem] font-black leading-none">{type.code}</span>
       </div>
       <div className="relative z-10">
         <div className="flex items-center gap-2 mb-4">
@@ -127,7 +127,7 @@ const ResultCard: React.FC<{ type: TypeDefinition, isMain?: boolean }> = ({ type
             Problem Type
           </span>
         </div>
-        <h1 className="text-6xl md:text-7xl font-black mb-4 tracking-tighter leading-none">
+        <h1 className="text-8xl md:text-9xl font-black mb-4 tracking-tighter leading-none text-transparent bg-clip-text bg-gradient-to-br from-white to-gray-400">
           {type.code}
         </h1>
         <h2 className="text-2xl md:text-3xl font-bold mb-3">{type.name}</h2>
@@ -153,6 +153,33 @@ const ResultCard: React.FC<{ type: TypeDefinition, isMain?: boolean }> = ({ type
         </ul>
       </div>
 
+      {/* Secret Mentor Section (NEW) */}
+      <div className="relative rounded-xl overflow-hidden shadow-inner">
+           <div className="absolute inset-0 bg-slate-900"></div>
+           <div className="relative p-6">
+              <div className="flex items-center gap-3 mb-4 border-b border-slate-700 pb-3">
+                 <div className="w-10 h-10 rounded-full bg-slate-800 border border-slate-600 flex items-center justify-center shadow-lg">
+                    <Lock className="w-5 h-5 text-ud-primary" />
+                 </div>
+                 <div>
+                    <p className="text-ud-primary text-xs font-bold uppercase tracking-wider mb-0.5">Secret Mentor의 진단</p>
+                    <p className="text-white font-bold text-sm flex items-center gap-2">
+                      {type.secretMentor.name} 
+                      <span className="text-slate-400 text-xs font-normal bg-slate-800 px-2 py-0.5 rounded-full border border-slate-700">{type.secretMentor.role}</span>
+                    </p>
+                 </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="shrink-0 pt-1">
+                  <MessageSquareQuote className="w-6 h-6 text-slate-500 transform flip-x" />
+                </div>
+                <p className="text-slate-200 text-sm md:text-base leading-relaxed italic">
+                   {type.secretMentor.comment}
+                </p>
+              </div>
+           </div>
+        </div>
+
       {/* Actions */}
       <div>
         <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wide mb-3 flex items-center gap-2">
@@ -170,41 +197,18 @@ const ResultCard: React.FC<{ type: TypeDefinition, isMain?: boolean }> = ({ type
         </ul>
       </div>
 
-      {/* Secret Mentor Section */}
-      {isMain && (
-        <div className="relative mt-8 rounded-xl overflow-hidden">
-           <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900"></div>
-           <div className="relative p-6">
-              <div className="flex items-center gap-3 mb-4 border-b border-slate-700 pb-3">
-                 <div className="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center">
-                    <Lock className="w-5 h-5 text-ud-primary" />
-                 </div>
-                 <div>
-                    <p className="text-ud-primary text-xs font-bold uppercase tracking-wider">Secret Mentor의 진단</p>
-                    <p className="text-white font-bold text-sm">{type.secretMentor.name} <span className="text-slate-400 text-xs font-normal">| {type.secretMentor.role}</span></p>
-                 </div>
-              </div>
-              <div className="flex gap-3">
-                <MessageSquareQuote className="w-8 h-8 text-slate-600 shrink-0 transform flip-x" />
-                <p className="text-slate-200 text-sm leading-relaxed italic">
-                   {type.secretMentor.comment}
-                </p>
-              </div>
-           </div>
-        </div>
-      )}
-
       {/* CTA Section */}
       <div className="pt-6 border-t border-gray-100">
-        <div className="bg-orange-50 border border-orange-100 p-5 rounded-xl mb-5">
-           <p className="text-ud-dark font-bold text-base md:text-lg mb-2 leading-snug">
-              {type.code} 타입 대표님,
-           </p>
-           <p className="text-gray-700 text-sm leading-relaxed">
+        <div className="bg-orange-50 border border-orange-200 p-6 rounded-xl mb-5 text-center">
+           <h4 className="text-ud-dark font-black text-lg md:text-xl mb-3 leading-snug">
+              {type.code} 타입 대표님,<br/>
+              <span className="text-ud-primary underline decoration-2 underline-offset-4">혼자 고민하면 답이 안 나옵니다.</span>
+           </h4>
+           <p className="text-gray-700 text-sm leading-relaxed font-medium break-keep">
              {type.ctaCopy}
            </p>
         </div>
-        <button className="w-full bg-ud-primary text-white py-4 rounded-xl font-bold text-lg hover:bg-red-600 transition-all shadow-lg shadow-orange-200 flex items-center justify-center gap-2 group">
+        <button className="w-full bg-ud-primary text-white py-4 rounded-xl font-bold text-lg hover:bg-red-600 transition-all shadow-lg shadow-orange-200 flex items-center justify-center gap-2 group animate-pulse hover:animate-none">
           {type.code} 솔루션 받으러 가기
           <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
         </button>
