@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { ArrowRight, Check, ChevronRight, RefreshCcw, Users, BarChart2, Lock, MessageSquareQuote } from 'lucide-react';
+import { ArrowRight, Check, ChevronRight, RefreshCcw, Users, BarChart2, Lock, Quote } from 'lucide-react';
 import { QUESTIONS, RESULT_TYPES } from './constants';
 import { Question, UserAnswers, TypeDefinition } from './types';
 
@@ -171,7 +171,7 @@ const ResultCard: React.FC<{ type: TypeDefinition, isMain?: boolean }> = ({ type
               </div>
               <div className="flex gap-4">
                 <div className="shrink-0 pt-1">
-                  <MessageSquareQuote className="w-6 h-6 text-slate-500 transform flip-x" />
+                  <Quote className="w-6 h-6 text-slate-500 transform flip-x" />
                 </div>
                 <p className="text-slate-200 text-sm md:text-base leading-relaxed italic">
                    {type.secretMentor.comment}
